@@ -1,6 +1,6 @@
 const { type } = require("os");
 const { createStore } = require("redux");
-
+const myCreateStore=require("./main")
 const initialState = {
     name: "Pratham",
     age: 25,
@@ -26,3 +26,5 @@ const store = createStore(reducer);
 store.dispatch({type:"post/increment"})
 
 store.dispatch({type:"post/decrement"})
+const myStore=myCreateStore();
+console.log(myStore)
